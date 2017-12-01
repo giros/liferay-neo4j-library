@@ -14,7 +14,9 @@
 
 package com.liferay.neo4j.service;
 
+import com.liferay.neo4j.api.LiferayGraphDatabaseNode;
 import com.liferay.neo4j.embedded.EmbeddedGraphDatabase;
+import com.liferay.portal.kernel.model.ClassedModel;
 import org.neo4j.graphdb.GraphDatabaseService;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
@@ -32,6 +34,14 @@ public class LiferayGraphDatabaseService {
 	public void activate(Map<String, Object> properties) {
 		_graphDatabaseService =
 				_embeddedGraphDatabase.getEmbeddedDatabaseService();
+	}
+
+	public LiferayGraphDatabaseNode addNode(ClassedModel classedModel) {
+
+	}
+
+	public void deleteNode(String className, long classPK) {
+
 	}
 
 	private GraphDatabaseService _graphDatabaseService;

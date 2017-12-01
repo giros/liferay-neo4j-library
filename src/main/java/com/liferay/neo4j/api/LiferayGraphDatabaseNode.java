@@ -17,5 +17,5 @@ package com.liferay.neo4j.api;
 /**
  * @author Gergely Mathe
  */
-public class LiferayNeo4jNode {
+public class LiferayGraphDatabaseNode {
 }
