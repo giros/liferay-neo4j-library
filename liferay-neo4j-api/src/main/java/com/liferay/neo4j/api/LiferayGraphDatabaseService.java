@@ -25,4 +25,6 @@ public interface LiferayGraphDatabaseService {
 
 	public void deleteNode(String className, long classPK);
 
+	public LiferayGraphDatabaseNode getNode(String className, long classPK);
+
 }

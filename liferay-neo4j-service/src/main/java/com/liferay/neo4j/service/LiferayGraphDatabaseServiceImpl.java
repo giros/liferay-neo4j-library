@@ -36,19 +36,21 @@ public class LiferayGraphDatabaseServiceImpl
 
 	@Activate
 	public void activate(Map<String, Object> properties) {
-		_graphDatabaseService =
-			_embeddedGraphDatabase.getEmbeddedDatabaseService();
+		_graphDatabase = _embeddedGraphDatabase.getEmbeddedDatabaseService();
 	}
 
 	public LiferayGraphDatabaseNode addNode(ClassedModel classedModel) {
-		return new LiferayGraphDatabaseNode();
+		return null;
 	}
 
 	public void deleteNode(String className, long classPK) {
-
 	}
 
-	private GraphDatabaseService _graphDatabaseService;
+	public LiferayGraphDatabaseNode getNode(String className, long classPK) {
+		return null;
+	}
+
+	private GraphDatabaseService _graphDatabase;
 
 	@Reference
 	EmbeddedGraphDatabase _embeddedGraphDatabase;
