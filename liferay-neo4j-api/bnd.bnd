@@ -1,0 +1,4 @@
+Bundle-Name: Liferay Neo4j API
+Bundle-SymbolicName: com.liferay.neo4j.api
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.neo4j.api

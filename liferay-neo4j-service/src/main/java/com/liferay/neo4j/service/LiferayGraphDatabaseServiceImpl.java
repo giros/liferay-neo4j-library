@@ -15,9 +15,12 @@
 package com.liferay.neo4j.service;
 
 import com.liferay.neo4j.api.LiferayGraphDatabaseNode;
+import com.liferay.neo4j.api.LiferayGraphDatabaseService;
 import com.liferay.neo4j.embedded.EmbeddedGraphDatabase;
 import com.liferay.portal.kernel.model.ClassedModel;
+
 import org.neo4j.graphdb.GraphDatabaseService;
+
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
@@ -28,7 +31,8 @@ import java.util.Map;
  * @author Gergely Mathe
  */
 @Component(immediate = true, service = LiferayGraphDatabaseService.class)
-public class LiferayGraphDatabaseService {
+public class LiferayGraphDatabaseServiceImpl
+	implements LiferayGraphDatabaseService {
 
 	@Activate
 	public void activate(Map<String, Object> properties) {
@@ -37,7 +41,7 @@ public class LiferayGraphDatabaseService {
 	}
 
 	public LiferayGraphDatabaseNode addNode(ClassedModel classedModel) {
-
+		return new LiferayGraphDatabaseNode();
 	}
 
 	public void deleteNode(String className, long classPK) {

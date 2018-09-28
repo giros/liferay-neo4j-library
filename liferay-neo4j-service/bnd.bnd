@@ -1,0 +1,3 @@
+Bundle-Name: Liferay Neo4j Service
+Bundle-SymbolicName: com.liferay.neo4j.service
+Bundle-Version: 1.0.0
